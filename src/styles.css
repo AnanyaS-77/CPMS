@@ -37,6 +37,149 @@ textarea {
   min-height: 100vh;
 }
 
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes barRise {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes lineDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes checkerDrift {
+  to {
+    background-position:
+      56px 0,
+      56px 56px,
+      112px -56px,
+      0 0;
+  }
+}
+
+.brand,
+.nav-link,
+.nav-button,
+.hero-button,
+.footer-button,
+.product-hero-button,
+.footer-link,
+.footer-social-link {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.brand-icon,
+.benefit-icon,
+.workflow-icon,
+.choice-list-item span,
+.footer-brand-icon,
+.module-list-icon,
+.module-detail-icon,
+.integration-icon,
+.efficiency-icon {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.stat-card,
+.utilization-card,
+.preview-card,
+.choice-list-item,
+.workflow-card,
+.workflow-card-item,
+.module-list-item,
+.module-detail-card,
+.integration-card,
+.efficiency-card {
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.nav-button:hover,
+.hero-button:hover,
+.footer-button:hover,
+.product-hero-button:hover {
+  transform: translateY(-2px);
+}
+
+.nav-button.filled:hover,
+.product-hero-button.primary:hover {
+  background: #0b559f;
+  box-shadow: 0 10px 20px rgba(6, 69, 136, 0.22);
+}
+
+.nav-button.outline:hover,
+.product-hero-button.secondary:hover {
+  border-color: #064588;
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.1);
+}
+
+.hero-button.primary:hover,
+.footer-button.primary:hover {
+  box-shadow: 0 12px 26px rgba(255, 255, 255, 0.18);
+}
+
+.hero-button.ghost:hover,
+.footer-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+.brand:hover .brand-icon,
+.footer-brand:hover .footer-brand-icon {
+  transform: rotate(-7deg) scale(1.05);
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+.nav-button:active,
+.hero-button:active,
+.footer-button:active,
+.product-hero-button:active {
+  transform: translateY(0);
+}
+
+.nav-button:focus-visible,
+.hero-button:focus-visible,
+.footer-button:focus-visible,
+.product-hero-button:focus-visible,
+.nav-link:focus-visible,
+.footer-link:focus-visible,
+.footer-social-link:focus-visible {
+  outline: 3px solid rgba(0, 166, 188, 0.32);
+  outline-offset: 3px;
+}
+
 .navbar {
   background: #ffffff;
   border-bottom: 1px solid #e9edf3;
@@ -2066,6 +2209,183 @@ h3 {
   font-size: 14px;
   line-height: 1.52;
   margin: 0;
+}
+
+.benefit-item:hover .benefit-icon,
+.workflow-step:hover .workflow-icon,
+.choice-list-item:hover span,
+.module-list-item:hover .module-list-icon,
+.module-detail-card:hover .module-detail-icon,
+.integration-card:hover .integration-icon,
+.efficiency-card:hover .efficiency-icon {
+  transform: translateY(-2px) scale(1.04);
+}
+
+.stat-card:hover,
+.utilization-card:hover,
+.preview-card:hover,
+.choice-list-item:hover,
+.workflow-card:hover,
+.module-detail-card:hover,
+.integration-card:hover,
+.efficiency-card:hover {
+  border-color: rgba(0, 166, 188, 0.28);
+  box-shadow: 0 14px 30px rgba(17, 24, 39, 0.12);
+  transform: translateY(-4px);
+}
+
+.workflow-card-item:hover,
+.module-list-item:hover {
+  border-color: rgba(0, 166, 188, 0.38);
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.1);
+  transform: translateX(4px);
+}
+
+.module-list-item.active:hover {
+  transform: translateX(4px) translateY(-2px);
+}
+
+.workflow-card-item:hover svg,
+.module-list-item:hover > svg,
+.product-hero-button:hover svg {
+  transform: translateX(3px);
+}
+
+.workflow-card-item svg,
+.module-list-item > svg,
+.product-hero-button svg {
+  transition: transform 180ms ease;
+}
+
+.footer-social-link:hover {
+  transform: translateY(-2px);
+}
+
+.banner-media,
+.product-hero-preview,
+.module-detail-preview {
+  transition:
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.banner-media:hover,
+.product-hero-preview:hover,
+.module-detail-card:hover .module-detail-preview {
+  box-shadow: 0 18px 34px rgba(17, 24, 39, 0.12);
+  transform: translateY(-3px);
+}
+
+.product-hero-preview:hover,
+.module-detail-card:hover .module-detail-preview {
+  animation: checkerDrift 2.8s linear infinite;
+}
+
+.bar {
+  transform-origin: bottom;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .banner-copy,
+  .banner-media,
+  .overview-copy,
+  .utilization-card,
+  .product-preview-heading,
+  .preview-card,
+  .workflow-heading,
+  .workflow-step,
+  .airline-choice-copy,
+  .choice-list-item,
+  .footer-cta-inner,
+  .product-hero-pill,
+  .product-heading-line,
+  .product-hero-text,
+  .product-hero-actions,
+  .product-hero-preview,
+  .product-system-copy,
+  .workflow-card,
+  .product-modules-heading,
+  .module-list-item,
+  .module-detail-card,
+  .product-integrations-copy,
+  .integration-card,
+  .product-efficiency-heading,
+  .efficiency-card {
+    animation: fadeSlideUp 560ms ease both;
+  }
+
+  .banner-media,
+  .product-hero-preview,
+  .module-detail-card {
+    animation-delay: 120ms;
+  }
+
+  .preview-card:nth-child(2),
+  .workflow-step:nth-child(2),
+  .choice-list-item:nth-child(2),
+  .module-list-item:nth-child(2),
+  .integration-card:nth-child(2),
+  .efficiency-card:nth-child(2) {
+    animation-delay: 80ms;
+  }
+
+  .preview-card:nth-child(3),
+  .workflow-step:nth-child(3),
+  .choice-list-item:nth-child(3),
+  .module-list-item:nth-child(3),
+  .integration-card:nth-child(3),
+  .efficiency-card:nth-child(3) {
+    animation-delay: 140ms;
+  }
+
+  .preview-card:nth-child(4),
+  .workflow-step:nth-child(4),
+  .choice-list-item:nth-child(4),
+  .module-list-item:nth-child(4),
+  .integration-card:nth-child(4),
+  .efficiency-card:nth-child(4) {
+    animation-delay: 200ms;
+  }
+
+  .workflow-step:nth-child(5),
+  .choice-list-item:nth-child(5),
+  .module-list-item:nth-child(5),
+  .integration-card:nth-child(5),
+  .efficiency-card:nth-child(5) {
+    animation-delay: 260ms;
+  }
+
+  .integration-card:nth-child(6) {
+    animation-delay: 320ms;
+  }
+
+  .bar {
+    animation: barRise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .line-plot svg path {
+    stroke-dasharray: 720;
+    stroke-dashoffset: 720;
+  }
+
+  .trend-line {
+    animation: lineDraw 1100ms ease forwards;
+  }
+
+  .cyan-line {
+    animation-delay: 160ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
 .content-section,
