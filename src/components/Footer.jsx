@@ -4,7 +4,7 @@ import { Github, Linkedin, Plane, X, Zap } from 'lucide-react';
 const footerLinks = [
   [
     { label: 'Products', path: '/product' },
-    { label: 'Features', path: '/#features' },
+    { label: 'Features', path: '/features' },
     { label: 'Solutions', path: '/#solutions' },
   ],
   [

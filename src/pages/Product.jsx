@@ -194,7 +194,7 @@ function ProductHero() {
             Book a Demo
             <ArrowRight size={16} strokeWidth={2.4} />
           </NavLink>
-          <NavLink className="product-hero-button secondary" to="/#features">
+          <NavLink className="product-hero-button secondary" to="/features">
             <Play size={15} strokeWidth={2.1} />
             View Live Product
           </NavLink>
