@@ -1,16 +1,15 @@
 import { NavLink } from 'react-router-dom';
 import {
   ArrowRight,
+  Activity,
   BarChart3,
   CalendarCheck,
-  Gauge,
   Globe2,
-  LayoutDashboard,
+  Layers3,
   Radar,
-  Route,
   Search,
   ShieldCheck,
-  SlidersHorizontal,
+  Timer,
 } from 'lucide-react';
 
 const precisionFeatures = [
@@ -24,7 +23,7 @@ const precisionFeatures = [
     icon: BarChart3,
     title: 'Dynamic Analytics',
     text: 'Real-time performance heatmaps and predictive operational bottlenecks.',
-    bullets: ['Pilot Utilization KPIs', 'Cost-Per-Leg Analysis'],
+    bullets: ['Fleet Utilization KPIs', 'Cost-Per-Leg Analysis'],
   },
   {
     icon: ShieldCheck,
@@ -42,12 +41,12 @@ const precisionFeatures = [
 
 const ganttHighlights = [
   {
-    icon: Gauge,
+    icon: Timer,
     title: 'Real-time Rest Monitoring',
     text: "Instant visual alerts when a crew member's duty day approaches mandatory rest limits.",
   },
   {
-    icon: SlidersHorizontal,
+    icon: Layers3,
     title: 'Multi-layered Filters',
     text: 'Pivot your view by fleet type, crew rank, or base location in milliseconds.',
   },
@@ -87,7 +86,7 @@ function DashboardChart() {
   return (
     <article className="feature-chart-card" aria-label="Dashboard overview chart">
       <div className="feature-chart-title">
-        <LayoutDashboard size={15} strokeWidth={2.2} />
+        <Activity size={17} strokeWidth={2.2} />
         <span>Dashboard Overview</span>
       </div>
       <div className="feature-chart-body">
