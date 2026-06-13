@@ -8,7 +8,7 @@ const footerLinks = [
     { label: 'Solutions', path: '/#solutions' },
   ],
   [
-    { label: 'About', path: '/product' },
+    { label: 'About', path: '/about' },
     { label: 'Pricing', path: '/contact' },
     { label: 'Contact', path: '/contact' },
   ],
